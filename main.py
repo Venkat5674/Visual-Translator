@@ -19,7 +19,7 @@ ELEVEN_LABS_API_KEY = os.getenv("ELEVEN_LABS_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Initialize ElevenLabs Client
-client = ElevenLabs(api_key="sk_958cb595a36abe70f47db6cf9f6b521ca9eb0af493656b18")
+client = ElevenLabs(api_key="")
 
 
 # Show Live Video & Capture an Image with Real-time Detection
@@ -161,7 +161,7 @@ def is_question(text):
 
 # Send Image + Text to Gemini
 def get_gemini_response(text, image_path):
-    genai.configure(api_key="AIzaSyAsi3P4_W5ZNDVfCWs_rT6A0T3YWWXNDyI")
+    genai.configure(api_key="")
     model = genai.GenerativeModel("gemini-1.5-flash", generation_config={
         "temperature": 0.7, "top_p": 1, "top_k": 1, "max_output_tokens": 100
     })
